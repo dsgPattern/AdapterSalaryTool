@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewHrSalaryProcessor.cs\NewHrSalaryProcessor.cs.csproj" />
+    <ProjectReference Include="..\NewHrSalaryProcessor.cs\NewHrSalaryProcessor.csproj" />
   </ItemGroup>
 
 </Project>

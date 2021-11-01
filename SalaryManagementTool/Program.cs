@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using NewHrSalaryProcessor.cs;
+﻿using NewHrSalaryProcessor;
+using System;
 
 namespace SalaryManagementTool
 {
@@ -15,13 +14,19 @@ namespace SalaryManagementTool
                 {"104","Luiza Apostol","BCR0923....","40000"},
             };
 
-            ISalaryProcessor bankUploader = SalaryToolFactory.GiveMeSalaryProcessor();
+            ISalaryProcessor bankUploader = SalaryToolFactory.GiveMeSalaryProcessor(false);
             bankUploader.ProcessCompanySalary(employeesArray);
 
-            var newUploadTool = new SalaryUploadManager();
+            bankUploader = SalaryToolFactory.GiveMeSalaryProcessor(true);
+            bankUploader.ProcessCompanySalary(employeesArray);
+
+
+
+            // A better tool for salary management is available, the the system only knows how to work with ISalaryProcessor
+            //var newUploadTool = new SalaryUploadManager();
             // the app only works with comma separated string values and knows how to use ISalaryProcessor.
             // How can it use the new SalaryUploadManager???
-            newUploadTool.UploadSalaries(new List<Employee>());
+            //newUploadTool.UploadSalaries(new List<Employee>());
 
 
             Console.ReadLine();

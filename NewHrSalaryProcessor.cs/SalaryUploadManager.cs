@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NewHrSalaryProcessor.cs
+namespace NewHrSalaryProcessor
 {
     public class SalaryUploadManager
     {

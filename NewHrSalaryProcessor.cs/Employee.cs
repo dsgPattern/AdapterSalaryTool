@@ -1,4 +1,4 @@
-﻿namespace NewHrSalaryProcessor.cs
+﻿namespace NewHrSalaryProcessor
 {
     public class Employee
     {
